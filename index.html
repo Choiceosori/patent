@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="발명 특허 탐정단 — 지식재산권을 배우고 빈칸을 채워 교육용 모의 특허출원서를 만드는 학습용 웹앱 (실제 특허출원 아님)">
+  <title>발명 특허 탐정단</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&family=Noto+Serif+KR:wght@500;700;900&family=Nanum+Gothic+Coding:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect x='8' y='6' width='44' height='52' rx='4' fill='%23fff' stroke='%23243B53' stroke-width='4'/%3E%3Ccircle cx='38' cy='38' r='10' fill='none' stroke='%23B36F45' stroke-width='5'/%3E%3Cpath d='M45 45l9 9' stroke='%23B36F45' stroke-width='6' stroke-linecap='round'/%3E%3Cpath d='M16 18h22M16 26h16' stroke='%23243B53' stroke-width='4'/%3E%3C/svg%3E">
+</head>
+<body>
+  <a class="skip" href="#main">본문 바로가기</a>
+  <div class="mock-banner" role="note">교육용 모의출원 · 실제 특허출원이 아닙니다</div>
+  <header class="topbar">
+    <button type="button" class="brand" data-act="go" data-tab="home" aria-label="발명 특허 탐정단 시작 화면">
+      <span class="brand-mark" aria-hidden="true">🔍</span>
+      <span class="brand-text"><b>발명 특허 탐정단</b><small>아이디어를 찾아서, 권리로 설명하다</small></span>
+    </button>
+    <div class="top-tools">
+      <label class="lvl"><span>학습 수준</span><select id="level-select" aria-label="학습 수준"></select></label>
+      <span id="save-status" class="save-status" role="status" aria-live="polite">● 임시저장됨</span>
+      <span id="submit-state" class="submit-state"></span>
+      <button type="button" class="icon-btn" id="btn-large" data-act="large" aria-pressed="false" title="글자 크게">가<span class="sr"> 글자 크게</span></button>
+      <button type="button" class="icon-btn" id="btn-contrast" data-act="contrast" aria-pressed="false" title="고대비">◐<span class="sr"> 고대비</span></button>
+      <button type="button" class="icon-btn wide" data-act="help">도움말</button>
+      <button type="button" class="icon-btn wide ink" data-act="export">전체 기록 내보내기</button>
+    </div>
+  </header>
+  <div class="layout">
+    <nav class="index-tabs" id="tabs" aria-label="메인 메뉴"></nav>
+    <main id="main" tabindex="-1"></main>
+  </div>
+  <footer class="site-foot">
+    <p>발명 특허 탐정단은 법적 효력이 없는 <b>교육용 모의출원</b> 웹앱입니다. 지식재산처·특허로의 공식 시스템이 아니며, 실제 접수·등록·심사·출원번호 발급·특허성 판단을 하지 않습니다. 모든 기록은 이 기기에만 저장됩니다.</p>
+  </footer>
+  <div id="print-area"></div>
+  <dialog id="dlg" aria-labelledby="dlg-body"><div id="dlg-body"></div></dialog>
+  <input type="file" id="import-file" accept="application/json,.json" hidden>
+  <div id="live" class="sr" aria-live="polite"></div>
+  <div id="toast" class="toast" aria-hidden="true"></div>
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
